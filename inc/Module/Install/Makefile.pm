@@ -8,7 +8,7 @@ use Fcntl qw/:flock :seek/;
 
 use vars qw{$VERSION @ISA $ISCORE};
 BEGIN {
-	$VERSION = '0.99';
+	$VERSION = '1.00';
 	@ISA     = 'Module::Install::Base';
 	$ISCORE  = 1;
 }
@@ -100,7 +100,6 @@ my %makemaker_argtype = (
 
 sub makemaker_args {
 	my ($self, %new_args) = @_;
-
 	my $args = ( $self->{makemaker_args} ||= {} );
 	foreach my $key (keys %new_args) {
 		if ($makemaker_argtype{$key}) {
@@ -413,4 +412,4 @@ sub postamble {
 
 __END__
 
-#line 542
+#line 541
